@@ -32,13 +32,16 @@ input{
     font-size: 18px;
     line-height: 18px;
     height: 20px;
-    /*width: 50px;*/
     padding: 8px;
     border: 1px solid #ddd;
     background: #fff;
     border-radius: 6px;
-    /*font-family: Lato, sans-serif;*/
     color: #888;
+}
+
+input:default{
+    border: 1px solid #ddd;
+
 }
 
 .form-box .details {
@@ -104,6 +107,8 @@ input{
 input:invalid{
     border: solid 2px red ;
 }
+
+
 
 
 
