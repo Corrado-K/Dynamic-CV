@@ -101,7 +101,7 @@ input{
 }
 
 
-.error-border{
+input:invalid{
     border: solid 2px red ;
 }
 

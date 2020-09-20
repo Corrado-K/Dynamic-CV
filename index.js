@@ -6,8 +6,24 @@
 const form = document.getElementById("newform");
 // const errorElement = document.getElementById("error");
 
+/*function namecheck(){
+    const names = form.elements["names"].value;
+    document.getElementById("names").classList.remove("error-border");
+    let msg ="";
 
-function onSubmit(e){
+    if(names ===""){
+        msg+= "Enter a name\n";
+        document.getElementById("names").classList.add("error-border");
+        return false;
+    }else{
+        return true;
+    }
+
+}*/
+
+
+
+/*function onSubmit(e){
 
     e.preventDefault();
 
@@ -34,56 +50,62 @@ function onSubmit(e){
     if(names ===""){
         msg+= "Enter a name\n";
         document.getElementById("names").classList.add("error-border");
+        return false;
     }
     if(address ===""){
         msg+= "Enter an address\n";
         document.getElementById("address").classList.add("error-border");
+        return false;
     }
     if(phone!==""){
         if(isNaN(phone)){
             msg += "Enter a number\n";
             document.getElementById("phone").classList.add("error-border");
+            return false;
         }
         if(phone.length<0 || phone.length >10){
             msg += "Invalid number\n";
+            return false;
         }
     }else{
         msg += "Enter a number\n"
         document.getElementById("phone").classList.add("error-border");
+        return false;
 
     }
     if( nationality ===""){
         msg+= "Enter a nationality\n";
         document.getElementById("nationality").classList.add("error-border");
+        return false;
     }
     if(email !=="") {
         if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(form.email.value)) {
             msg += "Enter a valid address";
+            return false;
         }
     }else{
         msg+= "Enter an email address\n";
         document.getElementById("email").classList.add("error-border");
+        return false;
     }
     if(url ===""){
         msg+= "Enter your linkedIn url address\n";
         document.getElementById("url").classList.add("error-border");
+        return false;
     }
 
 
     if(msg!== ""){
-        /*let error_para = document.createElement("p");
-        error_para.innerHTML =msg;*/
-        /*errorElement.appendChild(error_para);*/
         window.alert(msg);
     }
     else{
         window.alert("Success");
         window.location.href='./cv.html';
+        return true;
     }
 
 
-
-}
+}*/
 
 function getData(){
     let name2 = document.getElementById("names").value;
@@ -99,13 +121,6 @@ function getData(){
     localStorage.setItem("v4", nationality2);
     localStorage.setItem("v5", email2);
     localStorage.setItem("v6", url2);
-
-    /*console.log(localStorage.getItem("v1"));
-    console.log(localStorage.getItem("v2"));
-    console.log(localStorage.getItem("v3"));
-    console.log(localStorage.getItem("v4"));*/
-
-
 
 }
 
