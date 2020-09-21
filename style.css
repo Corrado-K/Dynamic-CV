@@ -1,48 +1,45 @@
 *{
-    background-color: white;
+        background-color: white;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), #b33030;*/
     color: black;
     font-family:"Century Gothic";
 
 }
 h3{
-
     text-align: center;
 }
 .form-box {
-    /*background-color: var(--content-bg);*/
-    /*color: var(--content-text);*/
+    /*background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));*/
+
     text-align: center;
     width: 70%;
     border: 1px solid black;
     border-radius: 6px;
-    margin: 2%;
+    margin: 0 auto 0 auto;
     padding: 5%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: left;
+    justify-content: center;
 }
 .container{
+
     display: block;
     width:60%;
-    margin: 0 auto 0 auto;
+    margin: 0 20% 0 20%;
 }
 
 input{
-    margin: 0;
+    margin: -5%;
     font-size: 18px;
     line-height: 18px;
     height: 20px;
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: -3px;
+    border: 1px solid #888;
     background: #fff;
     border-radius: 6px;
     color: #888;
 }
 
-input:default{
-    border: 1px solid #ddd;
-
-}
 
 .form-box .details {
     flex: 0 1 75%;
@@ -55,11 +52,10 @@ input:default{
 .form-box .details input {
     padding: 2px 4px;
     flex: 5 2;
-    /* width: 30em; */
     margin: 1%;
 }
 
-.form-box .details label {
+.form-box .details label{
     font-weight: bold;
     flex: 3 1;
     padding: 3px 4px;
@@ -84,10 +80,8 @@ input:default{
 .form-box .details select{
     padding: 2px 4px;
     flex: 5 2;
-     /*width: 30em;*/
     margin: 1%;
 }
-
 
 
 .btn{
@@ -104,25 +98,4 @@ input:default{
 }
 
 
-input:invalid{
-    border: solid 2px red ;
-}
-
-
-
-
-
-
-/*button #add{
-    border: 1px solid white;
-    padding: 10px 30px;
-    color: white;
-    text-decoration: none;
-    transition: 0.6s ease;
-}
-
-button #add:hover{
-    background-color: white;
-    color: black;
-}*/
 
