@@ -17,6 +17,74 @@ function getData(){
     localStorage.setItem("v5", email2);
     localStorage.setItem("v6",gender2);
 
+    function validate(){
+        const form = document.getElementById("newform");
+
+        const fname = form.elements["fnames"].value;
+        const lname = form.elements["lnames"].value;
+        const address = form.elements["address"].value;
+        const phone = form.elements["phone"].value
+        const email = form.elements["email"].value
+        const gender = form.elements["gender"].value;
+
+        document.getElementById("fnames").classList.remove("error-border");
+        document.getElementById("lnames").classList.remove("error-border");
+        document.getElementById("address").classList.remove("error-border");
+        document.getElementById("phone").classList.remove("error-border");
+        document.getElementById("gender").classList.remove("error-border");
+        document.getElementById("email").classList.remove("error-border");
+
+
+
+
+
+        if (fname === "") {
+            document.getElementById("fnames").classList.add("error-border");
+            return false;
+        }else if (!(isNaN(fname))){
+            document.getElementById("fnames").classList.add("error-border");
+            return false;
+        }
+
+
+        if (lname === "") {
+            document.getElementById("lnames").classList.add("error-border");
+            return false;
+        }else if (!(isNaN(lname))){
+            document.getElementById("lnames").classList.add("error-border");
+            return false;
+        }
+
+
+
+        if (phone === "") {
+            document.getElementById("phone").classList.add("error-border");
+            return false;
+        }else if (isNaN(phone)){
+            document.getElementById("phone").classList.add("error-border");
+            return false;
+        }
+
+
+        if (address === "") {
+            document.getElementById("address").classList.add("error-border");
+            return false;
+        }
+
+
+        if (email === "") {
+            document.getElementById("email").classList.add("error-border");
+            return false;
+        }
+
+        if (gender === "") {
+            document.getElementById("gender").classList.add("error-border");
+            return false;
+        }
+
+    }
+    return validate();
+
 }
 
 document.getElementById("namedata").innerHTML=localStorage.getItem("v1");
@@ -26,45 +94,8 @@ document.getElementById("emaildata").innerHTML=localStorage.getItem("v5");
 document.getElementById("genderdata").innerHTML=localStorage.getItem("v6");
 
 
-const form = document.getElementById("newform");
 
 
 
-function validate(){
 
-    let error_msg ="";
 
-    const fname = form.elements["fnames"].value;
-    const mname = form.elements["fnames"].value;
-    const lname = form.elements["fnames"].value;
-    const address = form.elements["address"].value;
-    const phone = form.elements["phone"].value
-    const email = form.elements["email"].value
-    const gender = form.elements["gender"].value;
-
-    if (fname === null) {
-        // error_msg += "Error, Please enter first name \n";
-        return false;
-    }
-    if (lname === null) {
-        // error_msg += "Error, Please enter last name \n";
-        return false;
-    }
-    if (phone === null) {
-        error_msg += "Error, Please enter phone number \n";
-        return false;
-    }
-    if (address === null) {
-        // error_msg += "Error, Please enter last name \n";
-        return false;
-    }
-    if (email === null) {
-        // error_msg += "Error, Please enter email \n";
-        return false;
-    }
-    if (gender === null) {
-        // error_msg += "Error, Please enter gender\n";
-        return false;
-    }
-
-}

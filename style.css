@@ -1,5 +1,5 @@
 *{
-        background-color: white;
+        background-color:#7D3A3A;
     /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), #b33030;*/
     color: black;
     font-family:"Century Gothic";
@@ -7,10 +7,12 @@
 }
 h3{
     text-align: center;
+    font-size: 24px;
+    color: white;
 }
 .form-box {
     /*background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));*/
-
+    background-color: white;
     text-align: center;
     width: 70%;
     border: 1px solid black;
@@ -26,6 +28,11 @@ h3{
     display: block;
     width:60%;
     margin: 0 20% 0 20%;
+}
+
+.details, .details label, .button, select, .btn{
+    background-color: white;
+
 }
 
 input{
@@ -97,5 +104,38 @@ input{
     color: white;
 }
 
+option{
+    background-color: white;
+}
+
+.error-border{
+    border: solid 2px red;
+}
+.head{
+    text-align: center;
+    display: flow;
+}
+
+.foot{
+    margin: 1% 1%;
+    text-align: center;
+
+}
+
+.head img{
+    width: 20%;
+    height: 20%;
+}
+
+.foot img{
+    width: 10%;
+    height: 10%;
+}
+
+.foot p{
+    font-size: 18px;
+    font-weight:bold;
+    color: white;
+}
 
 

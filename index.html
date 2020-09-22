@@ -5,12 +5,15 @@
     <title>Form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body onload="alert('All fields must be filled compulsorily, except middle name');">
 
 <div class="container">
+    <div class="head">
+        <img alt="Ashesi Logo" src="ashesiLogo.png">
+        <h3>ASHESI CV FORM</h3>
+    </div>
 
-    <h3>ASHESI CV FORM</h3>
-    <form id="newform" class="form-box" onclick="return validate()" action="./cv.html" method="post" >
+    <form id="newform" class="form-box" onclick="return getData()" action="./cv.html" method="post" >
 
         <div class="details">
             <label for="fnames">First Name: </label>
@@ -34,8 +37,8 @@
 
         <div class="details">
             <label for="phone">Phone: </label>
-            <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    name="phone" placeholder="xxx-xxx-xxxx" >
+            <input type="tel" id="phone" pattern="[0-9]{10}"
+                    name="phone" placeholder="xxxxxxxxxx" >
         </div>
 
         <div class="details">
@@ -56,6 +59,13 @@
 
         </div>
     </form>
+</div>
+<div class="foot">
+    <img alt="Ashesi Logo" src="ashesiLogo.png"><br>
+    <p>Creator: Emmanuel Kebede Martey <br>
+        Web Technologies 2020/2021
+    </p>
+
 </div>
 <script  src="./index.js"></script>
 </body>
